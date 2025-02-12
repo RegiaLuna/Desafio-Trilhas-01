@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html Long="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio 1 Do Programa Trilhas Maranhão.</title>
+</head>
+<body>
+    <h1>Clique nos botões para executar os exercícios!</h1>
+
+    <button onclick="executarExercicio('exercicio1.js')">Exercicio 1</button>
+    <button onclick="executarExercicio('exercicio2.js')">Exercicio 2</button>
+    <button onclick="executarExercicio('exercicio3.js')">Exercicio 3</button>
+    <button onclick="executarExercicio('exercicio4.js')">Exercicio 4</button>
+    <button onclick="executarExercicio('exercicio5.js')">Exercicio 5</button>
+    <button onclick="executarExercicio('exercicio6.js')">Exercicio 6</button>
+    <button onclick="executarExercicio('exercicio7.js')">Exercicio 7</button>
+    <button onclick="executarExercicio('exercicio8.js')">Exercicio 8</button>
+    <br>
+    <button onclick="executarExercicio('exercicio9.js')">Exercicio 9</button>
+    <button onclick="executarExercicio('exercicio10.js')">Exercicio 10</button>
+    <button onclick="executarExercicio('exercicio11.js')">Exercicio 11</button>
+    <button onclick="executarExercicio('exercicio12.js')">Exercicio 12</button>
+    <button onclick="executarExercicio('exercicio13.js')">Exercicio 13</button>
+    <button onclick="executarExercicio('exercicio14.js')">Exercicio 14</button>
+    <button onclick="executarExercicio('exercicio15.js')">Exercicio 15</button>
+    <p id="contagem"></p>
+
+    <script>
+        function executarExercicio(scriptNome){    
+            let scriptExistente = document.getElementById("script-exercicio");
+            if (scriptExistente) {
+                document.body.removeChild(scriptExistente);
+            }
+
+            let script = document.createElement("script");
+            script.id = "script-exercicio";
+            script.src = `js/${scriptNome}`;
+            document.body.appendChild(script);
+        }
+    </script>
+
+</body>
+</html>
